@@ -34,7 +34,7 @@ export const projects: Project[] = [
     name: "Brightwell Family Dental",
     trade: "Dental clinic",
     location: "Cary, NC",
-    url: "https://brightwell-family-dental.higgsfield.app",
+    url: "https://novaforge-demo-dental.vercel.app/",
     summary:
       "Written for people who put off the dentist because they’re nervous. Everything on the page moves slowly and speaks gently, and the header says whether the office is open right now, so you know someone will pick up if you call.",
     swatch: "#1D5A60",
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     name: "Steadfast Plumbing & Heating",
     trade: "Home services",
     location: "Boise, ID",
-    url: "https://steadfast-plumbing-heating.vercel.app",
+    url: "https://novaforge-demo-plumbing.vercel.app/",
     summary:
       "Nobody browses a plumber’s website at 2am. They want the number, so it’s the biggest thing on the screen, and the page is light enough to load on one bar of signal in a flooded basement.",
     lighthouse: 98,
@@ -55,8 +55,7 @@ export const projects: Project[] = [
     name: "Harborline Realty",
     trade: "Real estate",
     location: "Round Rock, TX",
-    // TODO: confirm production URL once deployed.
-    url: "https://harborline-realty.vercel.app",
+    url: "https://novaforge-demo-realestate.vercel.app/",
     summary:
       "People pick a realtor on gut feel, so the homepage opens on a short film of a house at dusk. Below that it splits into buying and selling, and the phone number stays one tap away the whole way down.",
     lighthouse: 92,

@@ -90,7 +90,7 @@ export function Contact() {
               don&rsquo;t like about your current site, or that you don&rsquo;t have one yet. Every
               message gets a personal reply within one business day.
             </p>
-            <p className="eyebrow mt-12 text-stone/50">Or email directly</p>
+            <p className="eyebrow mt-12 text-stone/60">Or email directly</p>
             <a
               href={`mailto:${site.email}`}
               className="display mt-3 inline-block text-[clamp(1.6rem,2.6vw,2.2rem)] transition-colors hover:text-cobalt-soft"

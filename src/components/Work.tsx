@@ -48,7 +48,6 @@ export function Work() {
                     <Image
                       src={s.desktop}
                       alt={`${p.name} homepage on desktop`}
-                      placeholder="blur"
                       sizes="(min-width: 1024px) 60vw, 100vw"
                       className="block h-auto w-full"
                     />
@@ -57,7 +56,6 @@ export function Work() {
                     <Image
                       src={s.mobile}
                       alt={`${p.name} homepage on a phone`}
-                      placeholder="blur"
                       sizes="(min-width: 1024px) 14vw, 24vw"
                       className="block h-auto w-full"
                     />

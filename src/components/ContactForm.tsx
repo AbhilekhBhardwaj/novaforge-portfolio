@@ -56,20 +56,20 @@ export function ContactForm() {
     <form onSubmit={onSubmit} className="grid gap-7">
       <div className="grid gap-7 sm:grid-cols-2">
         <label className="block">
-          <span className="eyebrow text-stone/50">Your name</span>
+          <span className="eyebrow text-stone/60">Your name</span>
           <input name="name" required autoComplete="name" className={field} />
         </label>
         <label className="block">
-          <span className="eyebrow text-stone/50">Email</span>
+          <span className="eyebrow text-stone/60">Email</span>
           <input name="email" type="email" required autoComplete="email" className={field} />
         </label>
       </div>
       <label className="block">
-        <span className="eyebrow text-stone/50">Business or current website</span>
+        <span className="eyebrow text-stone/60">Business or current website</span>
         <input name="website" autoComplete="url" placeholder="Optional" className={field} />
       </label>
       <label className="block">
-        <span className="eyebrow text-stone/50">What do you need?</span>
+        <span className="eyebrow text-stone/60">What do you need?</span>
         <textarea
           name="message"
           required
