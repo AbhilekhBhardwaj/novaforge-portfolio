@@ -37,7 +37,7 @@ export function Work() {
                 target="_blank"
                 rel="noopener"
                 className="group grid items-center gap-10 lg:grid-cols-12 lg:gap-12"
-                aria-label={`${p.name}, open the live site in a new tab`}
+                aria-label={`${p.name}: View live site (opens in a new tab)`}
               >
                 {/* Desktop view with the phone view overlapping its corner */}
                 <div className={`relative lg:col-span-8 ${flip ? "lg:order-2" : ""}`}>
@@ -71,7 +71,7 @@ export function Work() {
                   <p className="mt-6 max-w-md leading-relaxed text-ink-2">{p.summary}</p>
 
                   <div className="mt-9 flex items-end justify-between gap-6 border-t hairline pt-5">
-                    <span className="link-draw pb-0.5 text-[0.95rem] font-medium">Open the live site</span>
+                    <span className="link-draw pb-0.5 text-[0.95rem] font-medium">View live site</span>
                     {p.lighthouse && (
                       <span className="text-right text-[0.75rem] leading-tight text-ink-3">
                         <span className="display block text-2xl text-ink">{p.lighthouse}</span>
