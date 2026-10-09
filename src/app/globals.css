@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+/*
+  Novaforge palette, drawn from the hero still: honed limestone, blackened
+  steel, and the thin cobalt line of heat-tempered metal. The accent is used
+  sparingly (marks, focus, one hover state) so the demo work stays loudest.
+*/
+@theme {
+  --color-stone: #e8e4dc;
+  --color-stone-2: #dedad0;
+  --color-stone-3: #cfc9bd;
+  --color-ink: #1c1b19;
+  --color-ink-2: #4f4a43;
+  --color-ink-3: #7a746b;
+  --color-cobalt: #2f3fa0;
+  --color-cobalt-soft: #a9b1e3;
+
+  --font-display: var(--font-newsreader), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    background: var(--color-stone);
+    color: var(--color-ink);
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-cobalt);
+    color: var(--color-stone);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-cobalt);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility display {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-optical-sizing: auto;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@utility hairline {
+  border-color: color-mix(in oklab, var(--color-ink) 16%, transparent);
+}
+
+/* Underline that draws in from the left on hover. */
+@utility link-draw {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s var(--ease-out-soft);
+  &:hover {
+    background-size: 0% 1px;
+    background-position: 100% 100%;
+  }
+}
+
