@@ -7,7 +7,7 @@ export function Process() {
   return (
     <section id="process" className="mx-auto max-w-[88rem] scroll-mt-16 px-5 pt-28 sm:px-8 sm:pt-36 lg:px-12">
       <SectionHead label="Process" title="How a project runs" />
-      <ol className="mt-14 grid gap-px overflow-hidden border-y hairline bg-ink/15 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+      <ol data-reveal className="mt-14 grid gap-px overflow-hidden border-y hairline bg-ink/15 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
         {process.map((p, i) => (
           <li key={p.step} className="flex flex-col bg-stone py-8 sm:px-6 sm:py-10 lg:first:pl-0">
             <span aria-hidden className="display text-5xl text-ink-3/70 tabular-nums">
@@ -31,7 +31,7 @@ export function About() {
   ];
   return (
     <section id="about" className="mx-auto max-w-[88rem] scroll-mt-16 px-5 pt-28 sm:px-8 sm:pt-36 lg:px-12">
-      <div className="grid gap-12 lg:grid-cols-12 lg:gap-12">
+      <div data-reveal className="grid gap-12 lg:grid-cols-12 lg:gap-12">
         <p className="eyebrow text-ink-3 lg:col-span-3 lg:pt-3">About</p>
 
         <div className="lg:col-span-5">
@@ -82,7 +82,7 @@ export function Contact() {
     <section id="contact" className="mt-28 scroll-mt-16 bg-ink text-stone sm:mt-36">
       <div className="mx-auto max-w-[88rem] px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
         <SectionHead tone="dark" label="Contact" title="Tell the studio about your business." />
-        <div className="mt-14 grid gap-14 lg:mt-20 lg:grid-cols-12 lg:gap-12">
+        <div data-reveal className="mt-14 grid gap-14 lg:mt-20 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-3" />
           <div className="lg:col-span-4">
             <p className="max-w-sm text-[1.05rem] leading-relaxed text-stone/75">
@@ -93,7 +93,7 @@ export function Contact() {
             <p className="eyebrow mt-12 text-stone/60">Or email directly</p>
             <a
               href={`mailto:${site.email}`}
-              className="display mt-3 inline-block text-[clamp(1.6rem,2.6vw,2.2rem)] transition-colors hover:text-cobalt-soft"
+              className="display mt-3 inline-block text-[clamp(1.6rem,2.6vw,2.2rem)] transition-[color,opacity] duration-200 hover:text-cobalt-soft focus-visible:text-cobalt-soft active:opacity-70"
             >
               {site.email}
             </a>
@@ -114,10 +114,10 @@ export function Footer() {
       <div className="mx-auto flex max-w-[88rem] flex-col gap-6 px-5 py-10 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
         <Wordmark className="text-stone [&_.text-ink]:text-stone [&_.text-ink-2]:text-stone/70 [&_.text-ink-3]:text-stone/40" />
         <nav aria-label="Footer" className="flex flex-wrap gap-x-7 gap-y-2">
-          <a href="#work" className="hover:text-stone">Work</a>
-          <a href="#process" className="hover:text-stone">Process</a>
-          <a href="#about" className="hover:text-stone">About</a>
-          <a href={`mailto:${site.email}`} className="hover:text-stone">{site.email}</a>
+          <a href="#work" className="link-slide hover:text-stone focus-visible:text-stone">Work</a>
+          <a href="#process" className="link-slide hover:text-stone focus-visible:text-stone">Process</a>
+          <a href="#about" className="link-slide hover:text-stone focus-visible:text-stone">About</a>
+          <a href={`mailto:${site.email}`} className="link-slide hover:text-stone focus-visible:text-stone">{site.email}</a>
         </nav>
         <p>© {year} {site.name}</p>
       </div>

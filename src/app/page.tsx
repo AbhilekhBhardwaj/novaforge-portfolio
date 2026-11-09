@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { About, Contact, Footer, Process } from "@/components/Sections";
+import { RevealOnScroll } from "@/components/RevealOnScroll";
 import { Work } from "@/components/Work";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <RevealOnScroll />
     </>
   );
 }
